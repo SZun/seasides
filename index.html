@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="./restaurantStyles.css" rel="stylesheet">
+    <title>Seaside's</title>
+  </head>
+  <body>
+    
+    <!-- Header -->
+    <header>
+      <div class="jumbotron">
+        <h1 id="main__header" class="display-4 text-center">Seaside's!</h1>
+        <p class="lead text-center">Our restaurant is opening a new location!</p>
+      </div>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="#home">
+              <i class="fas fa-home"></i>
+            </a>
+            <a class="nav-item nav-link nav__anchor" href="#menu">Menu</a>
+            <a class="nav-item nav-link nav__anchor" href="#contact">Contact Us</a>
+          </div>
+        </div>
+    </nav>
+
+    <!-- Home -->
+    <div id="home">
+      <img
+        style="display: block; margin-left: auto; margin-right: auto; width: 50%;"
+        class="img-fluid mx-auto d-block mt-5 mb-5"
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARAAAAC5CAMAAADXsJC1AAAAh1BMVEUAAAD////6+vry8vLm5ub7+/v39/fs7OzKysre3t5vb2/p6env7++bm5vY2Nivr689PT3AwMCkpKRnZ2eEhIQvLy9OTk7Q0NCQkJAcHBypqalZWVl0dHTBwcFEREQmJiYMDAx8fHwpKSkUFBQ/Pz+Li4tgYGBVVVVMTEw1NTVra2uBgYGWlpZ4iGfvAAAWt0lEQVR4nO1dCXeqOhAmgggqILjv4Fpr///ve5PMJITFlrYoPnvnnHvsVcDwMZn5Zkk0jFeUS8isTdODeCJ5bzPG3KZH8TyyYkKaHsbTSJf9A0SXN8Kj1/RAnkTmJgHiND2SJxGf8GAfTY/kOWQh8WDnpofyFDJUePTjpsfyDLK1FSDrpsfyFOIoPFjS9FieQY4pHmzf9GCeQLYaHtOmB/MMMtUAGTU9mCeQkYbHP94OFNXW8PhHUw0j1BWk2/RompcTIjGz/rEyFAEEi5C7B02Ppnn5QL5uGJ1/cQyXnaSnIjtkNT2c5mUt8HCJi8yaHk7jcpYR//YfbRfiSvIhTGrY9HAalwQVZGMYIn94ano8jUufka9N/plULuhy2ZgSqv9MaksqyEb8EReP2Mz+UvQbqPg2LDepY+6LzfHjR9aMjNsCDw/+FH9MCgeYfysARgWx52RLijVuiykb8xdkzJSCdJC958STKYE/4o0xDWIbVOQ249zne1na/CN5+EGqID7G/zmRvQCMrRoY3uMFFaRlSJ87Lz/gz0wZUhCuF2G5K1HFb3Z4/PAeL6QgW4N8bjEz1JN4/Il+ESpN8YyhV+5zU0D+RLGXSOrOoADvWjxEVa/+gpPZIUnlZP0qfG7JMZKGtB49uCYkwnsdGJQi8kqO2dnptHp1iZFz8br2UvxVetTs7/gYutWlQZaiXAlGCrWXF1QQ7lmQjpQ3c7sKtVeXbuo9wttKMPw7CoKPnnsWTIkMS4/C4P/tsUNrRKgWwz2LcK3lueXV3yFlFLXxaM6+TbzQzmwz7y27FAKOfP+8mO39y52H+hDRWPvxFimTVDaTh5+7KWMJVsbUXd6wxv8zIZ/LozmRKSvt5Ea7m51MoWZUFl1j7QTOS1iYvvK5wkzYhUQIF1a0qJeU3QoNcWb9qJCX/h/KKfW5/k1ShlqUTaKhglAuYHQ2vMtHMrj3aB8g2P/AyTqy9tKU+qk4YWKsar1cTYKKMQuDWPuNgv8HY52sC6HezZcDZKYsweHT0G2eNw/I5l4vfYb35RufsvYSkevPWHy3oTUimGHnhQV0GpVDN5WDf7GaBK6b4kWpQGpKNZF4vFqXkSlZKq4Yqty3PFOA9F+qDw09La/zfxLWlYlKwTP2fsfxPVwwQukbFNZVtgfvKR6vNWd6koEKVtGpfJ6gLKtEnG3fcXyPFsqEbAiZyt1SG5pfve95pucXrD5YFMz2K58nZtpRzrjFHUf4YHHljBFhXfUV3OK0uTQlr9O9uZM+RjibQkVuN7kRvEbSls7F+e07D/NxcpQ+xiFF0eU0BcczLUuO4BI0YTkQ0VcI+oU4xMoucgqkMqbSthUXTxPsFtsD2q9lVTGjccK4JJMYStqSZRQNCzbnIafFY8rLFv8/oVwZ3aGeH1b9hmWNIiKjRFH/awGCt+2g89QLLgHTJH/WUlMQygG8Ss8ZNo15OHO0/DHtHNJHp5yP3cS7FBWTJv2v+gGSj1u1EtpSx7a0O+RCGyEEdO+5s2a6Tlh3cbvjSeIFQXSdxDVfGORsspsx/VKfGKnWnxQeQoVy8c2YppmQ91tm5ucSrwK3JQfVD+puIsc5fiNm+9DwSMkm6Q03Kdu8bTHkNKNxUu97WbvRz+TdabGs1NzP1sGrltfTtD1TtB47J8UwSK2nFJxOkXHSL1DTYxxHJitKrYuY5C4P5W5Ry/GkOtRNIRShcDapjhnYDlDVYHyWjbz1FCIGYZuVSp1LqeWQS5lkXPoYUKdEzqckI4Bz5JTZLaGWjpHBuhwNVmvoKNsGy6u1uk1Vb6JdsXnTg+Du2aQzjno9zzzLwiKB78s4i3BO6gsMKP1zI5Wu2dTUKtrqHnGM4+IZtrajF6ulgya6MVlI6msDlTpQnilNn0pbdcGg0WnNpTJkzqStM99l2V/I7xOqq4wpbfveCb5+O7LUW/XNmcONC24Ct+9qPiZ9BDiKnrFHkgqm5RAGktjhwTw9ppSr/eslmoN0jQWIn6SzW8UPZn11DrytnNGb6DsuCVHzYkJvuPjQeKBrMVlnwGwSTj+k7GaQbbD6gXj6OIJsCEDFY9aqr09LzJlc5LVgeUm1PjM8wU0E76B6L9cpWZUaXyNvWGqrvyMbzfPbBXonSx3tGvNPYy+XzrhYrCDpY9bGx0yuWNjGK4c6coJfY6CLhr/txYWP5e6DNWpIQSb6/lMFBdG5fChUQcBX7rV/LTs3/bZyoOn5mPf5fi7nMv+mguF9+l4f5xka3vtsp3pNv216QwUIkOrls++KbOmwRnNjI+dOqiDK2PYoskHXe58iQ+r0zZvxG0Vid2sm36LvaKGrlOV7ZdlXcoQyvUGO+R6NhYPUWgXxrYMk0a6BCpcLevwe2VBy84popsuUxToz44zdmjXG9qkk6qt6n2QfKTFTW3fB+D3rrtDfqmQOTRDFQbToyh1sT5K33aO0H6XqUeWwur7WysYZlCuKtY91BUkfGhfljKp3FFUXZavsz5+9W68JyW/wgAAopdllu0wPrFTuYM/Gigk5n7tT6QLq2sAFb1h9J4ZtqQclUkT5n32PlckdlhtulKn6yjjJWObX4QFKlHvCPe32DVmlVoihvTWzcbh9h/7Ck7r4V1kOmb/6QXphG7pOPklIORyVfkOfmnp8NY897X/nTNLoHl0faoMJ/0v2KU3qD4pgVvZeheRcCqpAuhBGo4knY2mlCAwIm060+/5AvhRFdb72XXKT2x/QQoxAspleupxCCWeIYjg7PdlPfEN+9SGJFsf7rPJQ+lEhky6D8h/sb4snHjPvoclMgwAETZFSLaxS0rr7xkIKjwo3Sdv//CSOSfDMbL0SFSS14yIqUN2CESuRu3ebKvtUpa4geeEPFIRScBnnRCZCpd5QQaRFyeSIpdz9F0IkrTCrZDekMv2AF1LzfrarCa2kslxkUejqF3RAVtLR8LhbACWFtkBjZqX0lxzaD2xZmfFZ5mYRURzquiQO9qZryt3xkGXgapZKcrKfEENJ/HTWEGZmiDJQOHn9dIooW3LMX7V2IZvQqtRJIq3NT9YmJfKeNH9Ni8ZU/VqRsM7FOGQipqOYS9P7NxHK7Gk1liWJwE9qpGlVI3UztIOfNLOKDTHWloGVTFNuu8fVA9p/JGGvFgvIZFrJrj9filZDUz6WZohkanFZj8Fjl9fK3FM1S3XN39B3ROuOU3PGyeJbVkd+8M8brLOP6HORFu9Hdh79KZkF8u9SPWnGvLOi3N+GZoTmbGFvxXKxvjXGpZMBThCuNSmBl7kg0dKxgKz/rpP1n8zNX8iebGS1rgbUpn7VFgiYjJYWOIuvOhOhQN4lk+kU2SIQQwKGS+vRXbbk3Ktxiq3wkIu44rWFRqShszA/PPzBr+RvqcQPkg60J/wMWbNzHr05LG3GUfVXSLzOtEIsHO+ERSAKrm5JGG+ecqROJ0P/LaVWstvg/4ihRpZtBY/f3yOsf55ep33Wcr29pDeSYByVqXLkd+o/Pqak0S0sSEFqXBB/lbytQxlP5b1EBCRMKT6FWaa1R8mDfUpOyILU1m56KLYvyHSCMChoOxEQa9gpHNz4Rn0YSta2cLNkCqhEuq0UJEO+2lkIG97NYlnvU8ks0yCRoQfqIv6tN0m9G3rXVtO7e9Ad1OTqZR6t7a7VY5dOFxkukTGtDQaI2yVNITe+sSXyoJp6gCQeC345GfLISwtGR/15bykegp0tCRGz+Z0scCD1+BgyDH30mlTIknkgjFhmmSNBOojQfmHZfecJNsalna9r6bkh0uFTphhThbbMG+Nv0OHfaaG69WzrRbv1AUJBq8wDUv+XzBFgxEIzIjWiT7f2jbxk2oRRXTbdTIAXmxk8yFrLZickYP7F55CkLqZ5k5EXGWp+O2IQnd2mBgmaBVOydCodyNgfMeDLx8IgTYg9gc3IS0JD+2bV542yFW3lnYjPqBoXuXPiIKiIgd5W+px4qF7x8v0mb0m6nY+K7N2MxZDG2tX/ZxsZStp6gP3YlnTh79OSYVxyihzedxKkGh2VSQM0zmmhl8wE0SyLDIbe9dP7hX/xOr1er28k8OKCmh16EB1YFrw1NKa9nhXSLZ8sZsJ9nczAuPTXxtzlviO0mQ9661tbo+cbAVyoExmemRhL85iOlX1noZi+FFDSLvQbKkyVeVF8A5NsTqZV/Fe9ggEz4f5hInamnGS/8ScBrtLqDeF+/A6l4vY2m7bgMQzhqwegrFub8fih43PFNdn+A7TAYR3LiuCCU/CSQilULaxV1a4SqXLxFZ/zJjfvOjogqFCisCKxdH+X8Qiwr+0ItzACaN84saT41GKx0cdRvcNdJmxNgPg8W8U/38Do5ka/PbbNGAY0oSFeCJCUI7WrpUnpKUd0d5gMW8j3UBTKa4UHMY4Z2Jr++reRU4BIc0DOcLcbBISa/3egruIuV/DRCfAawjAuAMhWAjJlW6NvR9yTOJhJhjF+nMlsaO2vVezIe3ootxPE+U19+kiLKlRk1Mtde7uNfwkHH7+3u+Q1pLW5bAuAGPsYAJnOlzog8R6z3QYHZDUe8wu2rQmNcZyOnllfajLxT24sd6kpQCVQJrVkhUu9W2cHqJtHZjlc9RAQHE0eEMNQKX41ZbhwQK6o5R1+wQUbyYeWSemsv7AkaASEXggbIpSffLfMZBRXQNXdXgw2MIrmMPKWze+CAFksVjcAsbxA1xAExOeZK4eF0YxfcNjqKC3Olg6dz0wJlbR4kVuELsgzrIwWrFhB6tx7AAGRNuTMtSJrVDkgZwnIIVoJGzLWARlFewBkbLW3AMgZL7hxtGntZIdv3dyuIv3pUioHC0spTSimCnHprak3kNaeBNOMagu8F9mQeQqI0hDuaaSXUYC4cEy/HUcwZ5RRnXR1G1ooL/vlrBoZqmhb8JVOnNVZ/P0TxjBdDeb6f+FUARKBTxhKQLaceYLbjVvo+06gmSPhZTRAXHiIfcY1ZLuB9x34bxzDBc9GxqlkFzeKuy6rBaStguJuxYLHOE2cW5sL+dgQh81VJbhDP22AIHNAVsLLdIhyB0iGifVZqMTvkpi1GOXxptwv7ow2i/E+4IJL0Ardy56LvfSdgpbQ1g2GZOaiX8YpnKiyCfP31X1KTldHtGQOncTYO8DL1zCJQ5D1yFis16FcjbALXR9UdeJ8GGMnMuYhB2rkuwE8yCCcGzPn7WMNZwXGyDkYZyebjCgqCXPi7DgoryNXjgoPMyue9jK/1xEUVkDamQDnLfuheEhlzRxPmPb5ocxnBUqld+5kshm4WOJNYNg6Zs5rthJZs0wWuQYvDRG9uOQKU0mrEN8zizSeMe3zK1lmd5JJzaIGFdrjgan+o1IknRr3m4mHCTCi7Rkj6vFqBfHLBOzTZRIb47P0XvC+8LI78Tl/TeA15geeJ8ZmAjIWL5Ql2cOfgmi9wWUO4lOQy2p1e0HMONIKayqm36m3pkjcaO2VHs60org+PLbcoV/BsQq6M0Tr1GNcVZfwfZRwG/LHdyYClFAuMzG2rC0IiIWPjCf0aPmvMIXWgZOIC2q9h/T6s1/23mtJMVlclD3qPnF76rOWYcrbIgySWvcHX7AQHL3RlfsLeUfgGyGQrh7csCO7cFzmRTw2sPjnLf4aQXRmzFsmfPQG/xZRdAIHGc2oT2XD+onDqUinPYbLRB6PE012DD8vow7SpjeaNGQn5K6/FMLVHaZosob7mXkESAw3CMMGMrbiO04ZHRlbtxl/1pypcjDmIi8CdHVu909ctVwW86N8UKg1EoUNr0Lx+ggCcgYtWRnwXhx8Yf2UklDQttTxGZJfce+4Z3yEj0wBEnNAliyacLVUmsnpZxDEIpZBQLYIiOnzxJkC5B2US3gIBISlgHCwzCrlfkXV0BrJtI+92hyl+txj1bCSLU7XDCDxmIXA1vs7pd8tarAoAMIEp+ZT5loAZMU1GwEJQn4X10pFRKkjGJ3tiztX3LmXY9ni35ABZG90rIW5YiPVE/cZIAmWR6Y5QLh0JSB0f1GlLrvs0m0/j8fdNwM/9EERcoBMW+70wrij+fCnYOBvA+JxOCG6nRxygJiBuCUEZPVmCeW4VmnUJbNBm2OPcng8oP9812Z5QDw+kWwe7HuuawlA4qlftCFghDtwkIsLn3NTpt/eSUCWEI55eHsVFJ5UZJ75H02XeyyTzYjTu8BNbDJeZs9LYgmMRCVwhZdpc0BiAmQuAVmII4XZ98Foal4m4LNJGlWPeVsLwGhVWFA5yzjeeZr66DxAPYAYDPss7jI/Ga2MPjsmnCXu+HDC9GlabDTiXKDHP+e+g81WxEOWcJTLjqPREADxEqqZcECER0ZAPpI+aA9YkFmVjRSIjCmXtEAK6z4knhX7y0SYo7XwhXNN7vWOaQ1oRbNXFFOPxBeP4KJsfmhsoREUyv1B99Tj3U1c3y7qV78ALdauEnXkAIF4f/SQFU1CtqPZkscq3W4XzN7meBR5ltOQv5eO4UDvH46zSfoad9/BBq7mJzi5ezb4CxWT5yu4wAkil2F3byzhfXH2ZDaq1FOPgNS5Qej/XBCQu9vP/41QK3rTw3geSdCGNj2Mx0v3Ru0kfAwjrSbXqfot2I9wZ3jBZRAejV0ADsfjK5q8qdql5RBO4QjjIwgwhN2EAZx6gv96WJEfBVw2xiScBtzYvsEJaQfPySrulo+CKaDn+KmNLos6co2Czy5voLicaBx410EPYn4ReWGEduHsoBOjs+WM5Sg8sqDatrhvLJ6cRKUfzhWBq9pBMWC3NnfCRqnv9Z/dTUIGERh52ynbrvlOM7wE1QbmbZl7Xoa6El+bAbXgWQ6fDcZ9TitDQTZGQPodZDDbucOSLVxwAQT2SK8Y3cW+xkVz4j/TjAFAHBlETNmQWzYCxAJA4gswsTEx+ggCWP4PFAnv07UsFwFJZFlPEPkAUONgcCofYUgTu+ymgqS/GPYMAreikiBT5vL7IUDYwUVAjDccKwdjMLwAIDsezxpxe72GCTESt04dqBogkQ4IBmzlyRH8rOkFLFLmZpqPmiJNF4Cwqb2QgJBElMLx2UfEQ9MLi/hsGzG7r66RA+RKgGC3TPliCAr3n6U9f2xCKHPEoHLK7LYvAQlDG6fMsm+hqqeAMFFHXLHuCl5HzIQwmRT+hoZgw0fpqnWqQj3Nzyg6PMHdRiPhs+sUHCMCsh7yflkAZDPVbMh2MOfZ0invfFuw2QymG58y0u7eAOT6iZWgveTih9zt17Jl4QezyAKAl5nBTSMgDrADAQgEsXmjOr/ypz1FO8mN6l7SzHJA8KYLPxfHhRKqT1O45s1Tvvw1ZcFDfAVICIAApYC/ERAP7i0CI+Oz8YXn2O1+kvRtoSEnaUQIkCuojycaXxcANnUgllFzSg09zYThKYzQksuTeIWhwy5nAuTEl65ZbC0TaUNmB7YoMFzg7cOeg+AzAMQKWxkvs2Jm0GJv9DqRM6akmECtic/0e9+JzWxvaorI2wFAInadwAMbmPDQOtaeb7hrzmgllNdirRmfKhfQluOpHXBlOCct0zalvQyFa120mM0N8KItXmlaFNdTkX7Yd9yf/AcyAO3YxZ98nv65H3xynC7yQHyVDQ75k2Wn6Z9LDMk0enb50E4WYJ5uQdzdRf24g55OPMpeiJf6ZetqojoIzXRfV9kdVXFxxGuJ1nk4PS7PyyRUXUKd57KnD5INuyXOHdscnlkKv2RD8lKNhN+RchW59dsYf0GuRTgeUbZ9YklycFgv12b6XRlo3ftm+Pe4WIlcjqHvutPwY/JHXYuS/wC1jDMOGvHDXQAAAABJRU5ErkJggg=="
+        alt="Seaside's Logo"
+      />
+
+      <!-- Description -->
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3"></div>
+          <div class="col-sm-6">
+            <p>Seaside's Togo delivers a taste of summer picnics from the east coast to sweet home Chicago. Inspired by our founder, Bill Nevruz’s memories of his childhood vacations on the jersey shore, this unique menu offers crispy fried chicken, slow-cooked ribs & fresh seafood dinners designed for you to enjoy with your family & friends. Roll up your sleeves and indulge!
+            </p>
+          </div>
+          <div class="col-sm-3"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menu -->
+    <div id="menu">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="card mt-5 card__bg__color" style="width: 18rem;">
+              <div class="card-body text-center">
+                <h5 class="card-title">Meat</h5>
+                <p >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati incidunt doloremque aliquid a tenetur quibusdam, placeat cum officia id omnis minus hic doloribus, repudiandae assumenda rem dolore magnam ducimus soluta.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card mt-5 card__bg__color" style="width: 18rem;">
+              <div class="card-body text-center">
+                <h5 class="card-title">Meat</h5>
+                <p >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati incidunt doloremque aliquid a tenetur quibusdam, placeat cum officia id omnis minus hic doloribus, repudiandae assumenda rem dolore magnam ducimus soluta.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card mt-5 card__bg__color" style="width: 18rem;">
+              <div class="card-body text-center">
+                <h5 class="card-title">Meat</h5>
+                <p >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati incidunt doloremque aliquid a tenetur quibusdam, placeat cum officia id omnis minus hic doloribus, repudiandae assumenda rem dolore magnam ducimus soluta.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card mt-5 card__bg__color" style="width: 18rem;">
+              <div class="card-body text-center">
+                <h5 class="card-title">Meat</h5>
+                <p >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati incidunt doloremque aliquid a tenetur quibusdam, placeat cum officia id omnis minus hic doloribus, repudiandae assumenda rem dolore magnam ducimus soluta.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card mt-5 card__bg__color" style="width: 18rem;">
+              <div class="card-body text-center">
+                <h5 class="card-title">Meat</h5>
+                <p >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati incidunt doloremque aliquid a tenetur quibusdam, placeat cum officia id omnis minus hic doloribus, repudiandae assumenda rem dolore magnam ducimus soluta.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card mt-5 card__bg__color" style="width: 18rem;">
+              <div class="card-body text-center">
+                <h5 class="card-title">Meat</h5>
+                <p >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati incidunt doloremque aliquid a tenetur quibusdam, placeat cum officia id omnis minus hic doloribus, repudiandae assumenda rem dolore magnam ducimus soluta.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carousel -->
+    <div id="main__carousel" class="carousel slide mt-5" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="jumbotron">
+            <h1 class="display-4 text-center">We're opening a new location!</h1>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="jumbotron">
+            <h1 class="display-4 text-center">We're rolling out our seasonal menu, with special options for this season.</h1>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="jumbotron">
+            <h1 class="display-4 text-center">The Drink of the Month is SG Special Brew.</h1>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#main__carousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#main__carousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <!-- Table -->
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Beverages</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Root Beer</th>
+          <td>$3.00</td>
+        </tr>
+        <tr>
+          <th scope="row">Bottled Water</th>
+          <td>$1.25</td>
+        </tr>
+        <tr>
+          <th scope="row">Lemonade</th>
+          <td>$1.00</td>
+        </tr>
+        <tr>
+          <th scope="row">Iced Tea</th>
+          <td>$1.25</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Contact Form -->
+    <div id="contact" class="mt-5 needs-validation">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <h1 class="text-center">Contact Us</h1>
+            <form>
+              <div class="form-group">
+                <label for="name"><strong>Name</strong></label>
+                <input
+                  type="text"
+                  class="form-control" required
+                  id="name"
+                  placeholder="John Smith"
+                />
+              </div>
+              <div class="form-group">
+                <label for="email"><strong>Email</strong></label>
+                <input
+                  type="email"
+                  class="form-control" required
+                  id="email"
+                  placeholder="email@domain.com"
+                />
+              </div>
+              <div class="form-group">
+                <label for="phoneNumber"><strong>Phone</strong></label>
+                <input
+                  type="phone"
+                  class="form-control" required
+                  id="phoneNumber"
+                  placeholder="(773) 248-1749"
+                />
+              </div>
+              <div class="form-group">
+                <label for="inquiry"><strong>Reason For Inquiry</strong></label>
+                <select class="form-control" required id="inquiry">
+                  <option>Catering</option>
+                  <option>Review</option>
+                  <option>Reccomendation</option>
+                  <option>Reservation</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Additional Information</label>
+                <textarea class="form-control" required id="message" rows="3"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="message">Have you been to the restaurant?</label>
+                <input class="mr-2" type="radio">No</input >
+                <input class="mr-2" type="radio">Yes</input >
+              </div>
+              <div class="form-group">
+                <label for="message">Beest day to contact you</label>
+                <input class="mr-2" type="checkbox">M</input >
+                <input class="mr-2" type="checkbox">T</input >
+                <input class="mr-2" type="checkbox">W</input >
+                <input class="mr-2" type="checkbox">Th</input >
+                <input class="mr-2" type="checkbox">F</input >
+              </div>
+              <button class="mx-auto d-block" type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer >
+      <div>
+        <p class="text-center">1962 N Halsted St, Chicago, IL 60614</p>
+        <p class="text-center">(773) 248-1749</p>
+      </div>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://kit.fontawesome.com/d1608feb52.js" crossorigin="anonymous"></script>
+    <script>
+      var form = document.querySelector('.needs-validation');
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+      });
+      form.classList.add('was-validated');
+    </script>
+    <noscript>
+      <div style="border: 1px solid purple; padding: 10px">
+        <span style="color:red">This site is best viewed with JavaScript enabled.!</span>
+      </div>
+    </noscript>
+  </body>
+</html>

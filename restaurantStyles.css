@@ -1,0 +1,23 @@
+#main__header {
+  font-family: "Bebas Neue", cursive;
+}
+
+.card__bg__color {
+  background-color: #40e0d0;
+}
+
+#home {
+  background-color: #40e0d0;
+}
+
+label {
+  font-weight: bold;
+}
+
+.nav__anchor:hover {
+  font-weight: bold;
+}
+
+.nav__anchor:visited {
+  color: #40e0d0;
+}
